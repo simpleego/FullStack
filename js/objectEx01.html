@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체예제</title>
+</head>
+<body>
+    <script>
+        const simple = {
+            name: '홍길동',
+            year: 1994,
+            month: 8,
+            date: 12,
+            gender: 'M',
+
+            log:function(value){
+                console.log(value);
+            },
+        };
+
+        const b = simple;
+        alert(b.name);
+        b.name = '영웅';
+        alert(simple.name);
+
+    </script>
+</body>
+</html>

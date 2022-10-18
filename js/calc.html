@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사칙연산 계산기</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        body {
+            position: relative;
+            width: 600px;
+            margin: 50px auto;
+            padding: 10px;
+            border: 10px solid #eee;
+            text-align: center;
+            font-size: 1.5em;
+            border-radius: 5px;
+        }
+        form {
+            width: 400px;
+            margin: 50px auto;
+            padding: 50px;
+            border: 5px solid #ccc;
+            text-align: left;
+            background-color: antiquewhite;
+        }
+        input {
+            width: 150px;
+            padding: 5px;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        input[type=button]{
+            width: 50px;
+            border-radius: 50%;
+            border: 3px solid #999;
+        }
+        h1 {
+            font-size: 1.2em;
+            position: absolute;
+            top: -40px;
+            left: 150px;
+            border: 5px solid #ddd;
+            padding: 5px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <form name="f1">
+        <h1>간단한 사칙연산 계산기</h1>
+        A : <input type="text" name="a" id="a" /><br />
+        B : <input type="text" name="b" id="b" /><br />
+        Result : <input type="text" size="5" name="result"
+                   id="result" /> <br />
+        <input type="button" size="5" value="+" onclick="add()" />
+        <input type="button" size="5" value="-" onclick="sub()" />
+        <input type="button" size="5" value="x" onclick="mul()" />
+        <input type="button" size="5" value="/" onclick="div()" />
+    </form>
+    
+</body>
+</html>
+<script>
+    function add(){
+        const aNum = parseInt(document.f1.a.value);
+        const bNum = parseInt(document.f1.b.value);
+        const result = aNum + bNum;
+        document.f1.result.value= result;
+    }
+    function sub(){
+        const aNum = parseInt(document.f1.a.value);
+        const bNum = parseInt(document.f1.b.value);
+        const result = aNum - bNum;
+        document.f1.result.value= result;
+    }
+    function mul(){
+        const aNum = parseInt(document.f1.a.value);
+        const bNum = parseInt(document.f1.b.value);
+        const result = aNum * bNum;
+        document.f1.result.value= result;
+    }
+    function div(){
+        const aNum = parseInt(document.f1.a.value);
+        const bNum = parseInt(document.f1.b.value);
+        let result=0;
+        if(bNum != 0){
+            result = aNum / bNum;
+        }        
+        document.f1.result.value= result.toPrecision(3);
+    }
+</script>

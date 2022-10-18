@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 과일을 다루어야 한다.
+        // 변수를 이용하여 과일을 준비
+        const apple='사과';
+        const orange='오렌지';
+        const pear='배';
+        const strawbery='딸기';
+
+        // 배열을 이용하여 과일을 준비
+        const fruits = ['사과','오렌지','배','딸기'];
+        const arrayOfArray = [
+                [1,2,3],
+                ['A',5]
+        ]
+        //alert(arrayOfArray[1][0]);
+        const a=10;
+        const b=20;
+        const variableArray=[a,b,30];
+        //alert(variableArray[0]);
+
+        const everything = ['사과',1,undefined,true,'배열',null];
+        const duplicated = ['가','가','가'];
+        const empty = [];
+
+        //console.log(everything.length);
+        empty[0]='f';
+        empty[1]='f';
+        empty[2]='f';
+        empty[0]='g';
+        //console.log(empty);
+        // 배열에 있는 모든 '라'를 제거하시오.
+        // 배열요소 제거는 splice
+        // '라'가 몇개인지 / 모두 제거되었는지?
+        // '라'가 없으면 모두 제거된것이다.
+
+        let target = ['가','라','나','다','라','마','라'];
+        let index=target.indexOf('라');
+        while(index > -1) {
+            target.splice(index,1);
+            index=target.indexOf('라');
+        }
+        console.log(target);
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

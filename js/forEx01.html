@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if문장</title>
+    <style>
+        #star{
+            text-align: right;
+            width: 300px;
+            border: 1px solid #999;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="star">
+    <script>
+        // for 반복문
+        let count=0;
+        for(let i=0; i<5; i++){
+            for(let j=0; j<i; j++){
+                count++;
+                document.write("*"+" ");
+            }
+            document.write("<br>");            
+        }        
+    </script>
+    </div>
+</body>
+
+</html>

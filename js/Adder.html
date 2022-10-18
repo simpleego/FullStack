@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    body {
+        position: relative;
+        width:600px;
+        margin: 50px auto;
+        padding: 10px;
+        border: 10px solid #eee;
+        text-align: center;
+        font-size: 1.5em;
+        border-radius: 5px;
+    }
+    form {
+        width:400px;
+        margin: 50px auto;
+        padding: 50px;
+        border: 5px solid #ccc;
+        text-align: left;
+        background-color: antiquewhite;
+    }
+    input {
+        width: 150px;
+        padding: 5px;
+        margin-bottom: 10px;        
+        font-size: 1.2em;
+    }
+
+    input[type=button] {
+        width: 50px;
+        border-radius: 50%;
+        border: 3px solid #999;
+    }
+
+    h1 {
+        font-size: 1.5em;
+        position: absolute;
+        top: -40px;
+        left: 100px;
+        padding: 5px;
+        border-radius: 5px;
+        border: 5px solid #ddd;
+        background-color: aqua;
+    }
+
+</style>
+
+<body> 
+    <h1>간단한 사칙연산 계산기</h1>
+    <form name="f1">
+        A:<input type="text"  name="a" id="a" /><br />
+        B:<input type="text" size=5 name="b" id="b" /><br />
+        RESULT:<input type="text" size=5 name="result" id="result" /><br />
+        <input type="button" size=5 value="+" onclick="chk('+')" />
+        <input type="button" value="-" onclick="chk('-')" />
+    </form>
+</body>
+
+</html>
+<script>
+    function add() {
+        var aNum = parseInt(document.f1.a.value);
+        var bNum = parseInt(document.f1.b.value);
+        result = aNum + bNum;
+
+        if (document.f1.a.value == null | document.f1.a.value == "") {
+            alert('A값을 입력하세요');
+        } else if (document.f1.b.value == null | document.f1.b.value == "") {
+            alert('B값을 입력하세요');
+        } else document.f1.result.value = result;
+    }
+</script>
+
+<script>
+    function chk(op) {
+        // op라는 매개변수로 +나 -를 받아오도록 함	
+        var a = document.f1.a; 
+        var b = document.f1.b; 
+
+        if (a.value.trim() == '') { 
+            alert('A값을 입력하세요'); 
+            return; 
+        } 
+        
+        // 공백문자 인식불가를 위한 trim으로 제거	
+        if(b.value.trim() == '') { 
+            alert('B값을 입력하세요'); 
+            return;
+        }	
+
+        var numA = parseInt(a.value);	
+        var numB = parseInt(b.value);
+
+        if(op == '+') {		
+            document.f1.result.value = numA + numB;	
+        }	else if(op == '-') {		
+            document.f1.result.value = numA - numB;	
+        }
+    }
+</script>
+

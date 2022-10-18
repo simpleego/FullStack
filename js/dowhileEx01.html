@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if문장</title>
+</head>
+
+<body>
+    <script>
+        // while 반복문
+        // 1부터 숫자를 1씩 더해서 100이상 되면 종료
+        // 100이상이 되는 숫자를 출력하시오.
+        let i = 0;
+        let sum = 0;
+        let day = 0;
+        let weight = 100;
+        // 운동량이 10이면 1kg 감량으로 처리
+
+        do {
+            day = prompt("당신의 운동량은? :")
+            // weight 처리
+            weight = weight - (day * 0.1);
+            document.write("현재 몸무게 : " + weight + "<br>");
+        } while (weight > 70);
+
+        alert("다이어트 성공했습니다.");
+    </script>
+</body>
+
+</html>

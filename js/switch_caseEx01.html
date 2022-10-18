@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if문장</title>
+</head>
+<body>
+    <script>
+        // 나이를 입력 받아서 성년/미성년을 구분하시오.
+
+        const level = prompt('당신의 몇학년 : ');       
+
+        // 학년별 처리
+        switch(level){
+            case '1':
+                alert('1학년');
+                break;
+            case '2':
+                alert('2학년');
+                break;
+            case '3':
+            case '4':
+                alert('3-4학년');
+                break;
+            case '5':
+                alert('5학년');
+            case '6':
+                alert('6학년');
+                break;
+            default:
+                alert('학년을 잘못입력했습니다.');
+        }
+
+    </script>
+</body>
+</html>
